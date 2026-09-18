@@ -1,35 +1,32 @@
-# ApexFit-3D
-A futuristic 3D gym landing page with immersive motion effects, premium fitness branding, and interactive sections built using React and Three.js.
+# React + TypeScript + Vite
 
-# NeonFit 3D Gym Experience
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-A futuristic 3D gym landing page built with React, TypeScript, and Vite. This project showcases a premium fitness brand with immersive visuals, neon lighting, layered motion effects, and a modern UI design.
+Currently, two official plugins are available:
 
-## Tech Stack
-- React
-- TypeScript
-- Vite
-- Three.js
-- CSS / UI animations
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## Features
-- 3D-inspired gym landing page
-- Modern neon aesthetic
-- Smooth scrolling interactions
-- Premium fitness brand sections
-- Responsive layout
+## React Compiler
 
-## Run Locally
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-```bash
-npm install
-npm run dev
+## Expanding the Oxlint configuration
 
-  Build
+If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
 
-Project Purpose
-This project is designed to present a high-end gym brand in a visually engaging way, combining motion, atmosphere, and digital-first fitness marketing.
+```json
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "typescript", "oxc"],
+  "options": {
+    "typeAware": true
+  },
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/only-export-components": ["warn", { "allowConstantExport": true }]
+  }
+}
+```
 
-License
-This project is for personal or portfolio use.
-
+See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
